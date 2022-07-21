@@ -20,7 +20,7 @@
 			//Mammal mammal1 = new Animal();
 		}
 
-		class Animal
+		public class Animal
 		{
 			private int lifeSpan;
 			public string Name { get; set; }

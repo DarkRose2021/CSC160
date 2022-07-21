@@ -11,7 +11,9 @@
 			//Stringy.DoIt();
 			//Arrays.DoIt();
 			//Inheritance.doIt();
-			Ploymorphism.doit();
+			//Ploymorphism.doit();
+			//Interface.doit();
+			Generics.doit();
 
 			//IO.getConsoleBool("Enter a bool");
 			//IO.getConsoleChar("Enter a char");
@@ -19,9 +21,6 @@
 			//IO.getConsoleString("Enter a string");
 			//IO.GetConsoleFloat("Enter a Float", 1.2f, 5.6f);
 			//IO.getConsoleMenu(new string[] { "open", "close", "Quit" });
-
-
-
 		}
 	}
 }
