@@ -13,7 +13,8 @@
 			//Inheritance.doIt();
 			//Ploymorphism.doit();
 			//Interface.doit();
-			Generics.doit();
+			//Generics.doit();
+			ExtensionMethods.Engage();
 
 			//IO.getConsoleBool("Enter a bool");
 			//IO.getConsoleChar("Enter a char");
