@@ -14,7 +14,8 @@
 			//Ploymorphism.doit();
 			//Interface.doit();
 			//Generics.doit();
-			ExtensionMethods.Engage();
+			//ExtensionMethods.Engage();
+			DebugIt.doIt();
 
 			//IO.getConsoleBool("Enter a bool");
 			//IO.getConsoleChar("Enter a char");
