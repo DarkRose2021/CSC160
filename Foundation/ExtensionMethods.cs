@@ -9,6 +9,7 @@
 			Console.WriteLine(strmsg.AppendToEnd(" is the best cheese in the world."));
 		}
 	}
+	//Extension must be in a static class
 	public static class StringHelper
 	{
 		public static bool IsFirstCap(this string strIncoming)
