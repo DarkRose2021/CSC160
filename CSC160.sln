@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Foundation", "Foundation\Foundation.csproj", "{1447C755-05C2-4DF7-B19D-980FFA30A9E1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Foundation", "Foundation\Foundation.csproj", "{1447C755-05C2-4DF7-B19D-980FFA30A9E1}"
 	ProjectSection(ProjectDependencies) = postProject
 		{C4D7FDC0-534C-46E3-9017-50362C1B8934} = {C4D7FDC0-534C-46E3-9017-50362C1B8934}
 	EndProjectSection
@@ -15,6 +15,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MasterMindLibrary", "..\CSC160.2\MasterMindLibrary\MasterMindLibrary.csproj", "{00D19DD3-2C24-4C6B-A1F4-1119C52489B5}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MasterMind", "..\CSC160.2\MasterMind\MasterMind.csproj", "{00C5A324-7973-46E4-9ECA-E8A89EAC54C2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WinForms", "WinForms\WinForms\WinForms.csproj", "{34FAB093-B8A8-4661-9543-3F5B0C52408B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -42,6 +44,10 @@ Global
 		{00C5A324-7973-46E4-9ECA-E8A89EAC54C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{00C5A324-7973-46E4-9ECA-E8A89EAC54C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{00C5A324-7973-46E4-9ECA-E8A89EAC54C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34FAB093-B8A8-4661-9543-3F5B0C52408B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34FAB093-B8A8-4661-9543-3F5B0C52408B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34FAB093-B8A8-4661-9543-3F5B0C52408B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34FAB093-B8A8-4661-9543-3F5B0C52408B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
