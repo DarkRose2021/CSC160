@@ -1,4 +1,4 @@
-namespace WinForms
+namespace NumberGuess
 {
 	internal static class Program
 	{
@@ -11,8 +11,7 @@ namespace WinForms
 			// To customize application configuration such as set high DPI settings or default font,
 			// see https://aka.ms/applicationconfiguration.
 			ApplicationConfiguration.Initialize();
-			GlobalThings.gContainersWindow;
-			Application.Run(new Form1());
+			Application.Run(new form());
 		}
 	}
 }
