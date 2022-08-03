@@ -9,13 +9,28 @@
         Title="MainWindow" Height="450" Width="800"
 	    Background="AliceBlue">
 	<Grid>
-		<Button  HorizontalAlignment="Center" Margin="0,261,0,0" VerticalAlignment="Top" Height="101" Width="180">
-			<StackPanel Orientation="Vertical">
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="*" />
+			<ColumnDefinition Width="*" />
+			<ColumnDefinition Width="*" />
+		</Grid.ColumnDefinitions>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="*" />
+			<RowDefinition Height="*" />
+			<RowDefinition Height="*" />
+		</Grid.RowDefinitions>
+		<Button  HorizontalAlignment="Center" Grid.Row="0" Grid.Column="1" VerticalAlignment="Top" Height="122" Width="304" Click="Button_Click">
+			<!--<StackPanel Orientation="Vertical">
 				<Label Content="Volume" />
 				<Label Content="Below button" />
 				<Slider Width="80" VerticalAlignment="Center"/>
-			</StackPanel>
+			</StackPanel> -->
 		</Button>
-
+		<ComboBox x:Name="FavFood" HorizontalAlignment="Center" Margin="0,72,0,50" Width="120" Grid.Row="1" SelectionChanged="ComboBox_SelectionChanged">
+			<ComboBoxItem Content="Pizza"></ComboBoxItem>
+			<ComboBoxItem Content="Tacos"/>
+			<ComboBoxItem Content="Sushi"/>
+			<ComboBoxItem Content="Rice"/>
+		</ComboBox>
 	</Grid>
 </Window>
