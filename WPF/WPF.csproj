@@ -7,4 +7,22 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Resources\button.png" />
+    <None Remove="Resources\happy.png" />
+    <None Remove="Resources\help.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\help.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\happy.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\button.png" />
+  </ItemGroup>
+
 </Project>

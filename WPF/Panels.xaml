@@ -6,7 +6,52 @@
         xmlns:local="clr-namespace:WPF"
         mc:Ignorable="d"
         Title="Panels" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+    <DockPanel>
+		<Label Content="Panels" FontSize="32" Foreground="Blue" HorizontalAlignment="Center" DockPanel.Dock="Top"></Label>
+		<Border BorderBrush="Black" BorderThickness="5">
+		    <Grid ShowGridLines="True">
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="*"/>
+					<ColumnDefinition Width="*"/>
+					<ColumnDefinition Width="*"/>
+				</Grid.ColumnDefinitions>
+				<Grid.RowDefinitions>
+					<RowDefinition Height="*"/>
+					<RowDefinition Height="*"/>
+					<RowDefinition Height="*"/>
+				</Grid.RowDefinitions>
+				<Label Content="Grid" FontSize="32" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+				<WrapPanel Grid.Column="1" Orientation="Horizontal">
+					<Button Width="60" Height="30" Margin="10">Button 1</Button>
+					<Button Width="60" Height="30" Margin="10">Button 2</Button>
+					<Button Width="60" Height="30" Margin="10">Button 3</Button>
+					<Button Width="60" Height="30" Margin="10">Button 4</Button>
+					<Button Width="60" Height="30" Margin="10">Button 5</Button>
+					<Button Width="60" Height="30" Margin="10">Button 6</Button>
+					<Button Width="60" Height="30" Margin="10">Button 7</Button>
+				</WrapPanel>
+				<StackPanel Grid.Column="2" Orientation="Vertical">
+					<Button Margin="5">Button 1</Button>					
+					<Button Margin="5">Button 2</Button>					
+					<Button Margin="5">Button 3</Button>					
+					<Button Margin="5">Button 4</Button>					
+				</StackPanel>
+				<DockPanel Grid.Row="1" LastChildFill="False">
+					<Button Margin="5" DockPanel.Dock="Top">Button 1</Button>
+					<Button Margin="5" DockPanel.Dock="Left">Button 2</Button>
+					<Button Margin="5" DockPanel.Dock="Right">Button 3</Button>
+					<Button Margin="5" DockPanel.Dock="Bottom">Button 4</Button>
+				</DockPanel>
+				<Button Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2">
+					This is a really long string to put on a button of all things
+				</Button>
+				<Canvas Grid.Column="0" Grid.Row="2">
+					<Ellipse Panel.ZIndex="2" Fill="Gainsboro" Canvas.Left="25" Canvas.Top="25" Width="120" Height="120"/>
+					<Rectangle Panel.ZIndex="3" Fill="LightBlue" Canvas.Left="25" Canvas.Top="25" Width="50" Height="70"/>
+					<Rectangle Panel.ZIndex="4" Fill="LightCoral" Canvas.Left="50" Canvas.Top="50" Width="50" Height="70"/>
+					<Rectangle Panel.ZIndex="5" Fill="LightCyan" Canvas.Left="75" Canvas.Top="75" Width="50" Height="70"/>
+				</Canvas>
+			</Grid>
+		</Border>
+	</DockPanel>
 </Window>
