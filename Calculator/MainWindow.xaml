@@ -18,9 +18,9 @@
 			</Label.RenderTransform>
 		</Label>
 		<WrapPanel Height="333" Width="290">
-			<Button Content="AC" Height="54" Width="71"/>
-			<Button Content="+/-" Height="54" Width="71"/>
-			<Button Content="%" Height="54" Width="71"/>
+			<Button Content="AC" Height="54" Width="71" AutomationProperties.Name="btnAC"/>
+			<Button Content="+/-" Height="54" Width="71" AutomationProperties.Name="btnPosNeg"/>
+			<Button Content="%" Height="54" Width="71" AutomationProperties.Name=""/>
 			<Button Content="/" Height="54" Width="71" Click="Button_Click"/>
 			<Button Content="7" Height="54" Width="71"/>
 			<Button Content="8" Height="54" Width="71"/>

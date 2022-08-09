@@ -25,7 +25,7 @@ namespace WPF
 			//ComboBox cb = (ComboBoxd)sender;
 			//ComboBoxItem cbi = (ComboBoxItem)cb.SelectedItem;
 			//MessageBox.Show(cbi.SelecetedValue.ToString());
-			MessageBox.Show(cbi.Content.ToString());
+			//MessageBox.Show(cbi.Content.ToString());
 		}
 	}
 }

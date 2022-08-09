@@ -19,14 +19,14 @@
 			<RowDefinition Height="*" />
 			<RowDefinition Height="*" />
 		</Grid.RowDefinitions>
-		<Button  HorizontalAlignment="Center" Grid.Row="0" Grid.Column="1" VerticalAlignment="Top" Height="122" Width="304" Click="Button_Click">
+		<Button  HorizontalAlignment="Center" Grid.Row="0" Grid.Column="1" VerticalAlignment="Top" Height="122" Width="304">
 			<!--<StackPanel Orientation="Vertical">
 				<Label Content="Volume" />
 				<Label Content="Below button" />
 				<Slider Width="80" VerticalAlignment="Center"/>
 			</StackPanel> -->
 		</Button>
-		<ComboBox x:Name="FavFood" HorizontalAlignment="Center" Margin="0,72,0,50" Width="120" Grid.Row="1" SelectionChanged="ComboBox_SelectionChanged">
+		<ComboBox x:Name="FavFood" HorizontalAlignment="Center" Margin="0,72,0,50" Width="120" Grid.Row="1" >
 			<ComboBoxItem Content="Pizza"></ComboBoxItem>
 			<ComboBoxItem Content="Tacos"/>
 			<ComboBoxItem Content="Sushi"/>
