@@ -5,38 +5,34 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Calculator"
         mc:Ignorable="d"
-        Title="MainWindow" Height="472" Width="332">
+        Title="MainWindow" Height="599" Width="353">
 	<DockPanel Margin="0,92,0,0">
-		<Label FontSize="32" DockPanel.Dock="Top" Height="56" RenderTransformOrigin="0.5,0.5" Width="299">
-			<Label.RenderTransform>
-				<TransformGroup>
-					<ScaleTransform ScaleX="-1"/>
-					<SkewTransform/>
-					<RotateTransform/>
-					<TranslateTransform/>
-				</TransformGroup>
-			</Label.RenderTransform>
-		</Label>
-		<WrapPanel Height="333" Width="290">
-			<Button Content="AC" Height="54" Width="71" AutomationProperties.Name="btnAC"/>
-			<Button Content="+/-" Height="54" Width="71" AutomationProperties.Name="btnPosNeg"/>
-			<Button Content="%" Height="54" Width="71" AutomationProperties.Name=""/>
-			<Button Content="/" Height="54" Width="71" Click="Button_Click"/>
-			<Button Content="7" Height="54" Width="71"/>
-			<Button Content="8" Height="54" Width="71"/>
-			<Button Content="9" Height="54" Width="71"/>
-			<Button Content="X" Height="54" Width="71"/>
-			<Button Content="4" Height="54" Width="71"/>
-			<Button Content="5" Height="54" Width="71"/>
-			<Button Content="6" Height="54" Width="71"/>
-			<Button Content="-" Height="54" Width="71"/>
-			<Button Content="1" Height="54" Width="71"/>
-			<Button Content="2" Height="54" Width="71"/>
-			<Button Content="3" Height="54" Width="71"/>
-			<Button Content="+" Height="54" Width="71"/>
-			<Button Content="0" Height="54" Width="142"/>
-			<Button Content="." Height="54" Width="71"/>
-			<Button Content="=" Height="54" Width="71"/>
+		<WrapPanel DockPanel.Dock="Top">
+			<Label Name="posNeg" FontSize="32" Height="54" Width="43"/>
+			<Label Name="Number" FontSize="32" Height="51" Width="242" Content="0"/>
+			<Label Name="operation" FontSize="32" Height="54" Width="58"/>
+		</WrapPanel>
+		<WrapPanel Height="326" Width="298">
+			<Button Content="AC" Height="54" Width="71" Click="Clear_Click"/>
+			<Button Content="+/-" Height="54" Width="71" Click="Neg_Click"/>
+			<Button Content="%" Height="54" Width="71" Click="Precent_Click"/>
+			<Button Content="/" Height="54" Width="71" Click="Divide_Click"/>
+			<Button Content="7" Height="54" Width="71" Click="Num7_Click"/>
+			<Button Content="8" Height="54" Width="71" Click="Num8_Click"/>
+			<Button Content="9" Height="54" Width="71" Click="Num9_Click"/>
+			<Button Content="X" Height="54" Width="71" Click="Multi_Click"/>
+			<Button Content="4" Height="54" Width="71" Click="Num4_Click"/>
+			<Button Content="5" Height="54" Width="71" Click="Num5_Click"/>
+			<Button Content="6" Height="54" Width="71" Click="Num6_Click"/>
+			<Button Content="-" Height="54" Width="71" Click="Sub_Click"/>
+			<Button Content="1" Height="54" Width="71" Click="Num1_Click"/>
+			<Button Content="2" Height="54" Width="71" Click="Num2_Click"/>
+			<Button Content="3" Height="54" Width="71" Click="Num3_Click"/>
+			<Button Content="+" Height="54" Width="71" Click="Add_Click"/>
+			<Button Content="0" Height="54" Width="142" Click="Num0_Click"/>
+			<Button Content="." Height="54" Width="71" Click="Dec_Click"/>
+			<Button Content="=" Height="54" Width="71" Click="Equals_Click"/>
+			<Button Content="^2" Height="54" Width="71" Click="exp_Click"/>
 		</WrapPanel>
 	</DockPanel>
 </Window>
