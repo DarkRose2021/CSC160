@@ -3,12 +3,11 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:WPF"
 			 xmlns:sys="clr-namespace:System;assembly=mscorlib"
-			 StartupUri="DataBinding.xaml">
+			 StartupUri="Resources.xaml">
 	<Application.Resources>
 		<Style x:Key="AppTextStyle" TargetType="TextBlock">
 			<Setter Property="FontSize" Value="32"/>
 			<Setter Property="FontFamily" Value="Times New Roman"/>
-			
 		</Style>
 		<sys:String x:Key="AppString">Application!</sys:String>
     </Application.Resources>
