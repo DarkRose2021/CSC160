@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Calculator"
         mc:Ignorable="d"
-        Title="MainWindow" Height="460" Width="298">
+        Title="MainWindow" Height="472" Width="332">
 	<DockPanel Margin="0,92,0,0">
 		<Label FontSize="32" DockPanel.Dock="Top" Height="56" RenderTransformOrigin="0.5,0.5" Width="299">
 			<Label.RenderTransform>
