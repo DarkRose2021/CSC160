@@ -131,27 +131,33 @@ namespace NumberGuess
 			{
 				string txt = txtGuess.Text;
 				int guess = int.Parse(txt);
-				numGuess++;
+
 				if (guess == answer)
 				{
-					lblResults[numGuess - 1].Text = txt + " correct!";
-					lblResults[numGuess - 1].ForeColor = Color.Green;
-					//picResults[guess].Image = Properties.Resources.correct_icon;
+					lblResults[numGuess].Text = txt + " correct!";
+					lblResults[numGuess].ForeColor = Color.Green;
+					picResults[numGuess].Image = Properties.Resources.correct_icon;
 					GameWon();
 				}
 				else if (guess != answer)
 				{
 					string highlow = "Too ";
-					lblResults[numGuess - 1].Text = highlow + (guess > answer ? "high" : "low");
-					lblResults[numGuess - 1].ForeColor = Color.Red;
-					//picResults[guess].Image = Properties.Resources.incorrect_icon;
+					lblResults[numGuess].Text = highlow + (guess > answer ? "high" : "low");
+					lblResults[numGuess].ForeColor = Color.Red;
+					picResults[numGuess].Image = Properties.Resources.incorrect_icon;
 
 					if (numGuess == 5)
 					{
 						GameLost();
 					}
 				}
+				numGuess++;
 			}
+		}
+
+		private void NumberGuess_Load(object sender, EventArgs e)
+		{
+
 		}
 	}
 }

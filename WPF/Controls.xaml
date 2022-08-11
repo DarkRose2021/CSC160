@@ -27,7 +27,7 @@
 				</StackPanel>
 				<Label Grid.Column="1" HorizontalAlignment="Center" Margin="20">
 					<StackPanel Orientation="Horizontal">
-						<Image Source="Resource/Happy.png" Width="30"/>
+						<Image Source="Resources/Happy.png" Width="30"/>
 						<Label Content="Have a nice day"/>
 					</StackPanel>
 				</Label>

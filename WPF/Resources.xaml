@@ -20,5 +20,15 @@
 		<TextBlock Text="{StaticResource CompanyName}" HorizontalAlignment="Center" FontSize="32" Foreground="{StaticResource CompanyColor}" />
 		<ListBox ItemsSource="{StaticResource Employees}" Margin="0 10" />
 		<TextBlock Text="{StaticResource AppString}" />
+		<StackPanel>
+		<StackPanel.Resources>
+			<sys:String x:Key="SPResearch">Stack panel Resource</sys:String>
+		</StackPanel.Resources>
+		<TextBlock Text="{StaticResource SPResearch}" />
+		</StackPanel>
+		<Button Name="btnResourceStatic" Content="Static Click me" Width="100" Background="{StaticResource CompanyColor}"/>
+		<Button Name="btnResourceDynamic" Content="Dynamic Click me" Width="100" Background="{StaticResource CompanyColor}" />
+		<Button Name="btnChangeColor" Content="Change Color" Width="100" Click="btnChangeColor_Click"/>
 	</StackPanel>
+	
 </Window>
