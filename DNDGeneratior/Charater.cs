@@ -1,15 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Linq;
 
 namespace DNDGeneratior
 {
-	internal class Charater
+	internal class Charater : INotifyPropertyChanged
 	{
 		private string cName;
 		private int cAge;
 		private string cGender;
 		private string cClass;
 		private string cRace;
+		private Random random = new Random();
 
 		public List<string> lstNames = new List<string>
 		{
@@ -18,26 +21,41 @@ namespace DNDGeneratior
 			"Oswald Copplepot"
 		};
 
-		public Charater(string cName, int cAge, string cGender, string cClass, string cRace)
+		public void Randomize()
 		{
-			this.cName = cName;
-			this.cAge = cAge;
-			this.cGender = cGender;
-			this.cClass = cClass;
-			this.cRace = cRace;
+			this.Name = lstNames.ElementAt(random.Next(lstNames.Count));
+			//this.cRace = lstRace.ElementAt(random.Next(lstRace.Count));
+		}
+
+		public Charater()
+		{
+			Randomize();
+		}
+
+		public Charater(string name, int age, string gender, string cclass, string race)
+		{
+			this.cName = name;
+			//this.cAge = age;
+			//this.cGender = gender;
+			//this.cClass = cclass;
+			//this.cRace = race;
 		}
 
 		public string Name
 		{
 			get { return cName; }
-			set { cName = value; }
+			set
+			{
+				cName = value;
+				PropertyHasChanged("Name");
+			}
 		}
 
-		public event EventHandler<string> PropertyChanged;
+		public event PropertyChangedEventHandler PropertyChanged;
 
 		private void PropertyHasChanged(string s)
 		{
-			//PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(s));
+			PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(s));
 		}
 	}
 }
