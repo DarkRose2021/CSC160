@@ -30,10 +30,32 @@ namespace DNDGeneratior
 			"Wizard"
 		};
 
+		public List<string> lstRaces = new List<string>
+		{
+			"Dragonborn",
+			"Dwarf",
+			"Elf",
+			"Gnome",
+			"Half-Elf",
+			"Halfling",
+			"Half-Orc",
+			"Human",
+			"Tiefling"
+		};
+
+		public List<string> lstGenders = new List<string>
+		{
+			"Male",
+			"Female",
+			"Non-Binary"
+		};
+
 		public void Randomize()
 		{
-			this.cclass = lstClasses.ElementAt(random.Next(lstClasses.Count));
-			//this.cRace = lstRace.ElementAt(random.Next(lstRace.Count));
+			this.cClass = lstClasses.ElementAt(random.Next(lstClasses.Count));
+			this.cRace = lstRaces.ElementAt(random.Next(lstRaces.Count));
+			this.cGender = lstGenders.ElementAt(random.Next(lstGenders.Count));
+			this.cAge = random.Next(20, 30);
 		}
 
 		public Charater()
@@ -50,13 +72,53 @@ namespace DNDGeneratior
 			this.cRace = race;
 		}
 
-		public string Name
+		//public string Name
+		//{
+		//	get { return cName; }
+		//	set
+		//	{
+		//		cName = value;
+		//		PropertyHasChanged("Name");
+		//	}
+		//}
+
+		public int Age
 		{
-			get { return cName; }
+			get { return cAge; }
 			set
 			{
-				cName = value;
-				PropertyHasChanged("Name");
+				cAge = value;
+				PropertyHasChanged("Age");
+			}
+		}
+
+		public string Gender
+		{
+			get { return cGender; }
+			set
+			{
+				cGender = value;
+				PropertyHasChanged("Gender");
+			}
+		}
+
+		public string Race
+		{
+			get { return cRace; }
+			set
+			{
+				cRace = value;
+				PropertyHasChanged("Race");
+			}
+		}
+
+		public string CClass
+		{
+			get { return cClass; }
+			set
+			{
+				cClass = value;
+				PropertyHasChanged("CClass");
 			}
 		}
 

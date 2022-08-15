@@ -4,33 +4,30 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DNDGeneratior" 
+		xmlns:uc="clr-namespace:DNDGeneratior.UserControl"
 		mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <DockPanel>
+
+	<DockPanel>
 		<Label Content="Dungeons and Dragons Randomizer" HorizontalAlignment="Center" FontSize="23" DockPanel.Dock="Top"/>
 		<StackPanel>
-			<WrapPanel>
-				<DockPanel>
-					<Label Content="Name:" Name="Name" HorizontalAlignment="Left"  DockPanel.Dock="Left"/>
-					<TextBox x:Name="userName" DockPanel.Dock="Right"/>
-				</DockPanel>
-			</WrapPanel>
-			<WrapPanel>
-				<Label Content="Age:" />
-				<Label Name="age"/>
-			</WrapPanel>
-			<WrapPanel>
-				<Label Content="Gender:" />
-				<Label Name="gender"/>
-			</WrapPanel>
-			<WrapPanel>
-				<Label Content="Class:" />
-				<Label Name="cclass"/>
-			</WrapPanel>
-			<WrapPanel>
-				<Label Content="Race:" />
-				<Label Name="race"/>
-			</WrapPanel>
+			<uc:textBox Title="Name" TitleWidth="70" HorizontalAlignment="Center"/>
+			<DockPanel>
+				<Label Content="Age:" HorizontalAlignment="Left"/>
+				<Label Content="{Binding Age}" HorizontalAlignment="Right"/>
+			</DockPanel>
+			<DockPanel>
+				<Label Content="Gender:" HorizontalAlignment="Left"/>
+				<Label Content="{Binding Gender}" HorizontalAlignment="Right"/>
+			</DockPanel>
+			<DockPanel>
+				<Label Content="Class:" HorizontalAlignment="Left"/>
+				<Label Content="{Binding CClass}" HorizontalAlignment="Right"/>
+			</DockPanel>
+			<DockPanel>
+				<Label Content="Race:"  HorizontalAlignment="Left" />
+				<Label Content="{Binding Race}" HorizontalAlignment="Right"/>
+			</DockPanel>
 			<Button Name="btnRandom" Content="Randomize"  Width="200" Click="btnRandom_Click" Margin="10"/>
 			<Button Name="btnClose" Content="Close" Click="btnClose_Click" Width="200" Margin="10"/>
 		</StackPanel>
