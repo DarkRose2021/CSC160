@@ -14,16 +14,25 @@ namespace DNDGeneratior
 		private string cRace;
 		private Random random = new Random();
 
-		public List<string> lstNames = new List<string>
+		public List<string> lstClasses = new List<string>
 		{
-			"Vland The Impaler",
-			"Talsen Phla",
-			"Oswald Copplepot"
+			"Barbarian",
+			"Bard",
+			"Cleric",
+			"Druid",
+			"Fighter",
+			"Monk",
+			"Paladin",
+			"Ranger",
+			"Rogue",
+			"Sorcerer",
+			"Warlock",
+			"Wizard"
 		};
 
 		public void Randomize()
 		{
-			this.Name = lstNames.ElementAt(random.Next(lstNames.Count));
+			this.cclass = lstClasses.ElementAt(random.Next(lstClasses.Count));
 			//this.cRace = lstRace.ElementAt(random.Next(lstRace.Count));
 		}
 
@@ -35,10 +44,10 @@ namespace DNDGeneratior
 		public Charater(string name, int age, string gender, string cclass, string race)
 		{
 			this.cName = name;
-			//this.cAge = age;
-			//this.cGender = gender;
-			//this.cClass = cclass;
-			//this.cRace = race;
+			this.cAge = age;
+			this.cGender = gender;
+			this.cClass = cclass;
+			this.cRace = race;
 		}
 
 		public string Name
