@@ -12,6 +12,12 @@ namespace DNDGeneratior
 		private string cGender;
 		private string cClass;
 		private string cRace;
+		private int cStrength;
+		private int cDex;
+		private int cChar;
+		private int cInteg;
+		private int cWis;
+		private int cCon;
 		private Random random = new Random();
 
 		public List<string> lstClasses = new List<string>
@@ -52,10 +58,16 @@ namespace DNDGeneratior
 
 		public void Randomize()
 		{
-			this.cClass = lstClasses.ElementAt(random.Next(lstClasses.Count));
-			this.cRace = lstRaces.ElementAt(random.Next(lstRaces.Count));
-			this.cGender = lstGenders.ElementAt(random.Next(lstGenders.Count));
-			this.cAge = random.Next(20, 30);
+			this.CClass = lstClasses.ElementAt(random.Next(lstClasses.Count));
+			this.Race = lstRaces.ElementAt(random.Next(lstRaces.Count));
+			this.Gender = lstGenders.ElementAt(random.Next(lstGenders.Count));
+			this.Age = random.Next(20, 100);
+			this.Strength = random.Next(20);
+			this.Dex = random.Next(20);
+			this.CChar = random.Next(20);
+			this.Integ = random.Next(20);
+			this.Wis = random.Next(20);
+			this.Con = random.Next(20);
 		}
 
 		public Charater()
@@ -63,13 +75,19 @@ namespace DNDGeneratior
 			Randomize();
 		}
 
-		public Charater(string name, int age, string gender, string cclass, string race)
+		public Charater(string name, int age, string gender, string cclass, string race, int strength, int dex, int integ, int wis, int cchar, int con)
 		{
 			this.cName = name;
 			this.cAge = age;
 			this.cGender = gender;
 			this.cClass = cclass;
 			this.cRace = race;
+			this.cStrength = strength;
+			this.cDex = dex;
+			this.cInteg = integ;
+			this.cWis = wis;
+			this.cChar = cchar;
+			this.cCon = con;
 		}
 
 		//public string Name
@@ -119,6 +137,64 @@ namespace DNDGeneratior
 			{
 				cClass = value;
 				PropertyHasChanged("CClass");
+			}
+		}
+
+		public int Strength
+		{
+			get { return cStrength; }
+			set
+			{
+				cStrength = value;
+				PropertyHasChanged("Strength");
+			}
+		}
+
+		public int Dex
+		{
+			get { return cDex; }
+			set
+			{
+				cDex = value;
+				PropertyHasChanged("Dex");
+			}
+		}
+		public int CChar
+		{
+			get { return cChar; }
+			set
+			{
+				cDex = value;
+				PropertyHasChanged("CChar");
+			}
+		}
+
+		public int Con
+		{
+			get { return cCon; }
+			set
+			{
+				cCon = value;
+				PropertyHasChanged("Con");
+			}
+		}
+		public int Wis
+		{
+			get { return cWis; }
+			set
+			{
+				cWis = value;
+				PropertyHasChanged("Wis");
+			}
+		}
+
+		public int Integ
+		{
+			get { return cInteg; }
+			set
+			{
+				cInteg = value;
+				PropertyHasChanged("Integ");
 			}
 		}
 

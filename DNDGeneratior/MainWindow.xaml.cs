@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using System.Windows.Data;
 
 namespace DNDGeneratior
 {
@@ -11,6 +12,8 @@ namespace DNDGeneratior
 		public MainWindow()
 		{
 			InitializeComponent();
+			Binding b = new Binding("Text");
+			b.Source = txtValue;
 			c = new Charater();
 			this.DataContext = c;
 		}

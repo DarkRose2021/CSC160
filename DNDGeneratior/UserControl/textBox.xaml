@@ -7,7 +7,6 @@
              mc:Ignorable="d" 
              d:DesignHeight="50" d:DesignWidth="400">
     <WrapPanel>
-		<TextBlock Text="{Binding Title}" Width="{Binding TitleWidth}" />
-		<TextBox Name="txtInput" Width="200" MaxLength="{Binding MaxLength}" />
+		<TextBlock Text="this application is copyright protected" Width="{Binding TitleWidth}" />
 	</WrapPanel>
 </UserControl>

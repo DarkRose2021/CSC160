@@ -6,43 +6,89 @@
         xmlns:local="clr-namespace:DNDGeneratior" 
 		xmlns:uc="clr-namespace:DNDGeneratior.UserControl"
 		mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="810" Width="450">
 	<Window.Resources>
 		<Style x:Key="WindowTextStyle" TargetType="Label">
 			<Setter Property="FontSize" Value="18" />
-			<Setter Property="FontFamily" Value="UserControl/#HomemadeApple-Regular"/>
+			<Setter Property="FontFamily" Value="Algerian"/>
 			<Setter Property="Margin" Value="10"/>
+		</Style>
+
+		<Style x:Key="TextblockStyle" TargetType="TextBlock">
+			<Setter Property="FontSize" Value="18" />
+			<Setter Property="FontFamily" Value="Viner Hand ITC" />
+			<Setter Property="Margin" Value="10"/>
+		</Style>
+
+		<Style x:Key="BtnStyle" TargetType="Button">
+			<Setter Property="FontFamily" Value="Algerian"/>
+			<Setter Property="Background" Value="#2b2b2b" />
+			<Setter Property="MaxWidth" Value="200" />
+			<Setter Property="Margin" Value="50 0" />
+			<Setter Property="Foreground" Value="White"/>
+			<Setter Property="Padding" Value="10"/>
+		</Style>
+
+		<Style x:Key="TextboxStyle" TargetType="TextBox">
+			<Setter Property="FontFamily" Value="Viner Hand ITC" />
+			<Setter Property="Width" Value="200" />
+			<Setter Property="Margin" Value="20"/>
+			<Setter Property="Background" Value="AntiqueWhite" />
 		</Style>
 	</Window.Resources>
 
-	<DockPanel Background="#2b2b2b">
-		<Label Content="Dungeons and Dragons Randomizer" HorizontalAlignment="Center" FontSize="23" DockPanel.Dock="Top"/>
-		<StackPanel>
-			<DockPanel>
-				<Label Content="Name:" HorizontalAlignment="Left" Style="{StaticResource WindowTextStyle}"/>
-				<uc:textBox Title="" TitleWidth="70" HorizontalAlignment="Center"/>
-				<Label Content="{Binding Name}" HorizontalAlignment="Right" />
-			</DockPanel>
-			<DockPanel>
-				<Label Content="Age:" HorizontalAlignment="Left" Style="{StaticResource WindowTextStyle}"/>
-				<Label Content="{Binding Age}" HorizontalAlignment="Right"/>
-			</DockPanel>
-			<DockPanel>
-				<Label Content="Gender:" HorizontalAlignment="Left" Style="{StaticResource WindowTextStyle}"/>
-				<Label Content="{Binding Gender}" HorizontalAlignment="Right"/>
-			</DockPanel>
-			<DockPanel>
-				<Label Content="Class:" HorizontalAlignment="Left" Style="{StaticResource WindowTextStyle}"/>
-				<Label Content="{Binding CClass}" HorizontalAlignment="Right"/>
-			</DockPanel>
-			<DockPanel>
-				<Label Content="Race:"  HorizontalAlignment="Left" Style="{StaticResource WindowTextStyle}"/>
-				<Label Content="{Binding Race}" HorizontalAlignment="Right"/>
-			</DockPanel>
-			
+	<DockPanel Background="AntiqueWhite">
+		<Label Content="Dungeons and Dragons Randomizer" HorizontalAlignment="Center" FontSize="23" DockPanel.Dock="Top" Style="{StaticResource WindowTextStyle}"/>
+		<TextBox Name="txtValue" Text="{Binding userName, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Center" Style="{StaticResource TextboxStyle}" DockPanel.Dock="Top"/>
+		<StackPanel DockPanel.Dock="Top" HorizontalAlignment="Center">
 			<WrapPanel>
-				<Button Name="btnRandom" Content="Randomize"  Width="200" Click="btnRandom_Click" Margin="10"/>
-				<Button Name="btnClose" Content="Close" Click="btnClose_Click" Width="200" Margin="10"/>
+				<Label Content="Name:" Style="{StaticResource WindowTextStyle}"/>
+				<TextBlock Name="userName" Text="{Binding Path=Text, ElementName=txtValue}" Style="{StaticResource TextblockStyle}"/>
+			</WrapPanel>
+			<WrapPanel>
+				<Label Content="Age:" Style="{StaticResource WindowTextStyle}"/>
+				<TextBlock Text="{Binding Age}" Style="{StaticResource TextblockStyle}"/>
+			</WrapPanel>
+			<WrapPanel>
+				<Label Content="Gender:" Style="{StaticResource WindowTextStyle}"/>
+				<TextBlock Text="{Binding Gender}" Style="{StaticResource TextblockStyle}"/>
+			</WrapPanel>
+			<WrapPanel>
+				<Label Content="Class:" Style="{StaticResource WindowTextStyle}"/>
+				<TextBlock Text="{Binding CClass}" Style="{StaticResource TextblockStyle}"/>
+			</WrapPanel>
+			<WrapPanel>
+				<Label Content="Race:" Style="{StaticResource WindowTextStyle}"/>
+				<TextBlock Text="{Binding Race}" Style="{StaticResource TextblockStyle}"/>
+			</WrapPanel>
+			<WrapPanel>
+				<Label Content="Strength: " Style="{StaticResource WindowTextStyle}" />
+				<TextBlock Text="{Binding Strength}" Style="{StaticResource TextblockStyle}" />
+			</WrapPanel>
+			<WrapPanel>
+				<Label Content="Wisdom: " Style="{StaticResource WindowTextStyle}" />
+				<TextBlock Text="{Binding Wis}" Style="{StaticResource TextblockStyle}" />
+			</WrapPanel>
+			<WrapPanel>
+				<Label Content="Dexterity: " Style="{StaticResource WindowTextStyle}" />
+				<TextBlock Text="{Binding Dex}" Style="{StaticResource TextblockStyle}" />
+			</WrapPanel>
+			<WrapPanel>
+				<Label Content="Constitution: " Style="{StaticResource WindowTextStyle}" />
+				<TextBlock Text="{Binding Con}" Style="{StaticResource TextblockStyle}" />
+			</WrapPanel>
+			<WrapPanel>
+				<Label Content="Charisma: " Style="{StaticResource WindowTextStyle}" />
+				<TextBlock Text="{Binding CChar}" Style="{StaticResource TextblockStyle}" />
+			</WrapPanel>
+			<WrapPanel>
+				<Label Content="Intelligence: " Style="{StaticResource WindowTextStyle}" />
+				<TextBlock Text="{Binding Integ}" Style="{StaticResource TextblockStyle}" />
+			</WrapPanel>
+			<WrapPanel>
+				<Button Name="btnClose" Content="Close" Click="btnClose_Click" Style="{StaticResource BtnStyle}"/>
+				<Button Name="btnRandom" Content="Randomize" Click="btnRandom_Click" Style="{StaticResource BtnStyle}"/>
+				<uc:textBox />
 			</WrapPanel>
 		</StackPanel>
 	</DockPanel>
