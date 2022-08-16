@@ -7,29 +7,43 @@
 		xmlns:uc="clr-namespace:DNDGeneratior.UserControl"
 		mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+	<Window.Resources>
+		<Style x:Key="WindowTextStyle" TargetType="Label">
+			<Setter Property="FontSize" Value="18" />
+			<Setter Property="FontFamily" Value="UserControl/#HomemadeApple-Regular"/>
+			<Setter Property="Margin" Value="10"/>
+		</Style>
+	</Window.Resources>
 
-	<DockPanel>
+	<DockPanel Background="#2b2b2b">
 		<Label Content="Dungeons and Dragons Randomizer" HorizontalAlignment="Center" FontSize="23" DockPanel.Dock="Top"/>
 		<StackPanel>
-			<uc:textBox Title="Name" TitleWidth="70" HorizontalAlignment="Center"/>
 			<DockPanel>
-				<Label Content="Age:" HorizontalAlignment="Left"/>
+				<Label Content="Name:" HorizontalAlignment="Left" Style="{StaticResource WindowTextStyle}"/>
+				<uc:textBox Title="" TitleWidth="70" HorizontalAlignment="Center"/>
+				<Label Content="{Binding Name}" HorizontalAlignment="Right" />
+			</DockPanel>
+			<DockPanel>
+				<Label Content="Age:" HorizontalAlignment="Left" Style="{StaticResource WindowTextStyle}"/>
 				<Label Content="{Binding Age}" HorizontalAlignment="Right"/>
 			</DockPanel>
 			<DockPanel>
-				<Label Content="Gender:" HorizontalAlignment="Left"/>
+				<Label Content="Gender:" HorizontalAlignment="Left" Style="{StaticResource WindowTextStyle}"/>
 				<Label Content="{Binding Gender}" HorizontalAlignment="Right"/>
 			</DockPanel>
 			<DockPanel>
-				<Label Content="Class:" HorizontalAlignment="Left"/>
+				<Label Content="Class:" HorizontalAlignment="Left" Style="{StaticResource WindowTextStyle}"/>
 				<Label Content="{Binding CClass}" HorizontalAlignment="Right"/>
 			</DockPanel>
 			<DockPanel>
-				<Label Content="Race:"  HorizontalAlignment="Left" />
+				<Label Content="Race:"  HorizontalAlignment="Left" Style="{StaticResource WindowTextStyle}"/>
 				<Label Content="{Binding Race}" HorizontalAlignment="Right"/>
 			</DockPanel>
-			<Button Name="btnRandom" Content="Randomize"  Width="200" Click="btnRandom_Click" Margin="10"/>
-			<Button Name="btnClose" Content="Close" Click="btnClose_Click" Width="200" Margin="10"/>
+			
+			<WrapPanel>
+				<Button Name="btnRandom" Content="Randomize"  Width="200" Click="btnRandom_Click" Margin="10"/>
+				<Button Name="btnClose" Content="Close" Click="btnClose_Click" Width="200" Margin="10"/>
+			</WrapPanel>
 		</StackPanel>
 	</DockPanel>
 </Window>
