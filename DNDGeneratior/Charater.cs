@@ -61,7 +61,7 @@ namespace DNDGeneratior
 			this.CClass = lstClasses.ElementAt(random.Next(lstClasses.Count));
 			this.Race = lstRaces.ElementAt(random.Next(lstRaces.Count));
 			this.Gender = lstGenders.ElementAt(random.Next(lstGenders.Count));
-			this.Age = random.Next(20, 100);
+			this.Age = random.Next(18, 100);
 			this.Strength = random.Next(20);
 			this.Dex = random.Next(20);
 			this.CChar = random.Next(20);
@@ -164,7 +164,7 @@ namespace DNDGeneratior
 			get { return cChar; }
 			set
 			{
-				cDex = value;
+				cChar = value;
 				PropertyHasChanged("CChar");
 			}
 		}
