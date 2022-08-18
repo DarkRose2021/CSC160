@@ -8,5 +8,7 @@
         Title="DB" Height="450" Width="500">
 	<StackPanel>
 		<Button Name="btnDoit" Content="Do it" HorizontalAlignment="Center" Margin="10" Click="btnDoit_Click" Height="26" Width="130"/>
+		<Label Name="lblMsg" HorizontalAlignment="Center" Content="" />
+		<DataGrid Name="dg"  Height="100" />
 	</StackPanel>
 </Window>

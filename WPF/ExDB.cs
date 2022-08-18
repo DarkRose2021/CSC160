@@ -2,7 +2,7 @@
 using System.Data;
 using System.Data.SqlClient;
 
-namespace DatabaseWPFTest
+namespace WPF
 {
     public static class ExDB
     {
@@ -18,7 +18,7 @@ namespace DatabaseWPFTest
             if (sqlcmd.Connection.State != ConnectionState.Open)
             {
                 dbConn.ConnectionString = "data source=(local);initial catalog=" + strDB + ";Trusted_Connection=True";
-                //dbConn.ConnectionString = "data source=(local);user id=admin;pwd=test;initial catalog=" + strDB;
+                //dbConn.ConnectionString = "data source=(local);user id=SimpleDBLogin;pwd=Simple;initial catalog=" + strDB;
                 sqlcmd.Connection.Open();
                 return true;
             }
