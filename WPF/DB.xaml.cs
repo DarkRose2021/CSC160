@@ -24,8 +24,8 @@ namespace WPF
 			string sql;
 			long lngReturn;
 			int intID;
-			sql = "select ID from Users where Username=@username and password=@Password";
-			ht.Add("@ID", 3);
+			sql = "select ID from names";
+			//ht.Add("@ID", 3);
 			dt = ExDB.GetDataTable("AwesomeDB", ht, sql);
 			//dg.ItemsSource = dt.DefaultView;
 
@@ -48,7 +48,17 @@ namespace WPF
 			var s = (from names in ds.names
 					 where names.ID == 3
 					 select names.Name);
-			lblMsg.Content = s.First().ToString();
+			//lblMsg.Content = s.First().ToString();
+
+			dt = ad.GetData();
+			Names3.namesRow drNew = dt.Rows.Find(3) as Names3.namesRow;
+			intID = (int)drNew["ID"];
+			//lblMsg.Content = intID;
+
+			DataRow[] ardr;
+			ardr = dt.Select("Name='Katie' and ID=7");
+			MessageBox.Show(ardr[0]["Name"].ToString());
+
 		}
 	}
 }
