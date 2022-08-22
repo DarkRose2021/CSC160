@@ -20,11 +20,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WinForms", "WinForms\WinFor
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPF", "WPF\WPF.csproj", "{6F03AD7F-ABB2-47DF-A9BD-F13CB8DA5E13}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator", "Calculator\Calculator.csproj", "{CE16083F-06D4-4877-9361-36E1D429F5E2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Calculator", "Calculator\Calculator.csproj", "{CE16083F-06D4-4877-9361-36E1D429F5E2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DNDGeneratior", "DNDGeneratior\DNDGeneratior.csproj", "{6F05D478-709E-4BA7-BEC4-704B8CD57D6E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DNDGeneratior", "DNDGeneratior\DNDGeneratior.csproj", "{6F05D478-709E-4BA7-BEC4-704B8CD57D6E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumberGuess", "NumberGuess\NumberGuess.csproj", "{823BD309-2D1B-48B2-A44B-B1A7CE9D845F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Login", "Login\Login.csproj", "{62B428D6-F234-4CC8-89C8-E504D39C4709}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Final", "Final\Final.csproj", "{958A9075-DB30-443A-A2DD-DD6E11B9CFA0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -72,6 +76,14 @@ Global
 		{823BD309-2D1B-48B2-A44B-B1A7CE9D845F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{823BD309-2D1B-48B2-A44B-B1A7CE9D845F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{823BD309-2D1B-48B2-A44B-B1A7CE9D845F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62B428D6-F234-4CC8-89C8-E504D39C4709}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62B428D6-F234-4CC8-89C8-E504D39C4709}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62B428D6-F234-4CC8-89C8-E504D39C4709}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62B428D6-F234-4CC8-89C8-E504D39C4709}.Release|Any CPU.Build.0 = Release|Any CPU
+		{958A9075-DB30-443A-A2DD-DD6E11B9CFA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{958A9075-DB30-443A-A2DD-DD6E11B9CFA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{958A9075-DB30-443A-A2DD-DD6E11B9CFA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{958A9075-DB30-443A-A2DD-DD6E11B9CFA0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

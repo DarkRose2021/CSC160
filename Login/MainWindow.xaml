@@ -6,7 +6,28 @@
         xmlns:local="clr-namespace:Login"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
-    </Grid>
+	<Grid>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="*" />
+			<ColumnDefinition Width="*" />
+		</Grid.ColumnDefinitions>
+		<Grid.RowDefinitions>
+			<RowDefinition/>
+			<RowDefinition/>
+			<RowDefinition/>
+		</Grid.RowDefinitions>
+		<StackPanel Grid.Column="0" Name="stackLabels" HorizontalAlignment="Left">
+			<Label Name="lblName" Content="Name"/>
+			<Label Name="lblEmail" Content="Email"/>
+			<Label Name="lblUser" Content="Username"/>
+			<Label Name="lblPass" Content="Password"/>
+		</StackPanel>
+		<StackPanel Grid.Column="1" Name="stackLabels2" HorizontalAlignment="Left">
+			<TextBox Name="txtName" Width="100"/>
+			<TextBox Name="txtEmail" Width="100" />
+			<TextBox Name="txtUsername" Width="100"/>
+			<TextBox Name="txtPass" Width="100" />
+		</StackPanel>
+		<Button Name="btnSubmit" Content="Create Account"  Grid.Row="1" Grid.Column="1" Height="25" Width="100" VerticalAlignment="Top"/>
+	</Grid>
 </Window>
