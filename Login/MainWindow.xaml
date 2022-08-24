@@ -5,21 +5,38 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Login"
         mc:Ignorable="d"
-        Title="MainWindow" Height="300" Width="300">
-	<WrapPanel HorizontalAlignment="Center">
-		<StackPanel Name="stackLabels">
-			<Label Name="lblName" Content="Name" Margin="10"/>
-			<Label Name="lblEmail" Content="Email" Margin="10"/>
-			<Label Name="lblUser" Content="Username" Margin="10"/>
-			<Label Name="lblPass" Content="Password" Margin="10"/>
-		</StackPanel>
-		<StackPanel Name="stackLabels2">
-			<TextBox Name="txtName" Width="100" Margin="10 20"/>
-			<TextBox Name="txtEmail" Width="100" Margin="10 8" />
-			<TextBox Name="txtUsername" Width="100" Margin="10 17"/>
-			<TextBox Name="txtPass" Width="100" Margin="10 9" />
-			<Button Name="btnSubmit" Content="Create Account" Height="25" Width="100" VerticalAlignment="Bottom" Click="btnSubmit_Click"/>
-			<Label Name="lblmsg" />
-		</StackPanel>
-	</WrapPanel>
+        Title="MainWindow" Height="309" Width="423">
+	<Window.Resources>
+		<Style x:Key="lblStyle" TargetType="Label">
+			<Setter Property="FontSize" Value="23"/>
+		</Style>
+	</Window.Resources>
+	<StackPanel>
+		<WrapPanel HorizontalAlignment="Center">
+			<StackPanel Name="stackLabels">
+				<Label Name="lblName" Content="Name" Margin="10"/>
+				<Label Name="lblEmail" Content="Email" Margin="10"/>
+				<Label Name="lblUser" Content="Username" Margin="10"/>
+				<Label Name="lblPass" Content="Password" Margin="10"/>
+			</StackPanel>
+			<StackPanel Name="stackLabels2">
+				<TextBox Name="txtName" Width="100" Margin="10 20"/>
+				<TextBox Name="txtEmail" Width="100" Margin="10 8" />
+				<TextBox Name="txtUsername" Width="100" Margin="10 17"/>
+				<TextBox Name="txtPass" Width="100" Margin="10 9" />
+				<Button Name="btnSubmit" Content="Create Account" Height="25" Width="100" VerticalAlignment="Bottom" Click="btnSubmit_Click"/>
+
+			</StackPanel>
+			<StackPanel>
+				<Label Content="Username" Margin="10"/>
+				<Label Content="Password" Margin="10"/>
+			</StackPanel>
+			<StackPanel>
+				<TextBox Name="logUser" Width="100" Margin="10 16" />
+				<TextBox Name="logPass" Width="100" Margin="10 "/>
+				<Button Name="btnlogin" Content="Login" Margin="10" Click="btnlogin_Click"/>
+			</StackPanel>
+		</WrapPanel>
+		<Label Name="lblmsg" Style="{StaticResource lblStyle}" HorizontalAlignment="Center" Margin="10"/>
+	</StackPanel>
 </Window>
