@@ -7,18 +7,19 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="300" Width="300">
 	<WrapPanel HorizontalAlignment="Center">
-		<StackPanel Name="stackLabels" HorizontalAlignment="Left">
+		<StackPanel Name="stackLabels">
 			<Label Name="lblName" Content="Name" Margin="10"/>
 			<Label Name="lblEmail" Content="Email" Margin="10"/>
 			<Label Name="lblUser" Content="Username" Margin="10"/>
 			<Label Name="lblPass" Content="Password" Margin="10"/>
 		</StackPanel>
-		<StackPanel Name="stackLabels2" HorizontalAlignment="Left">
+		<StackPanel Name="stackLabels2">
 			<TextBox Name="txtName" Width="100" Margin="10 20"/>
-			<TextBox Name="txtEmail" Width="100" Margin="10" />
-			<TextBox Name="txtUsername" Width="100" Margin="10 "/>
-			<TextBox Name="txtPass" Width="100" Margin="10 20" />
+			<TextBox Name="txtEmail" Width="100" Margin="10 8" />
+			<TextBox Name="txtUsername" Width="100" Margin="10 17"/>
+			<TextBox Name="txtPass" Width="100" Margin="10 9" />
 			<Button Name="btnSubmit" Content="Create Account" Height="25" Width="100" VerticalAlignment="Bottom" Click="btnSubmit_Click"/>
+			<Label Name="lblmsg" />
 		</StackPanel>
 	</WrapPanel>
 </Window>
