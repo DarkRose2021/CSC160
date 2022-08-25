@@ -1,17 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Final
 {
@@ -20,9 +9,34 @@ namespace Final
 	/// </summary>
 	public partial class MainWindow : Window
 	{
+		private Random random = new Random();
+		int[] ary = new int[10];
 		public MainWindow()
 		{
 			InitializeComponent();
+		}
+
+		private void Button_Click_1(object sender, RoutedEventArgs e)
+		{
+			for (int i = 0; i < ary.Length; i++)
+			{
+				ary[i] = random.Next();
+				aryTxt.Text = ary[i].ToString();
+			}
+		}
+
+		private void Button_Click(object sender, RoutedEventArgs e)
+		{
+			StringBuilder sb = new StringBuilder();
+
+			if (stringTxt.Text == "")
+			{
+				stringTxt.Text = addTxt.Text;
+			}
+			else if (stringTxt.Text != "")
+			{
+				stringTxt.Text = sb.Append(addTxt.Text).ToString();
+			}
 		}
 	}
 }

@@ -7,6 +7,40 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition></ColumnDefinition>
+			<ColumnDefinition></ColumnDefinition>
+			<ColumnDefinition></ColumnDefinition>
+		</Grid.ColumnDefinitions>
+		<Grid.RowDefinitions>
+			<RowDefinition></RowDefinition>
+			<RowDefinition></RowDefinition>
+			<RowDefinition></RowDefinition>
+		</Grid.RowDefinitions>
+		<StackPanel Grid.Column="0" Grid.Row="0">
+			<Label Content="{Binding Path=Text, ElementName=updateTxt}" />
+			<TextBox x:Name="updateTxt" Text="Type Here"/>
+			<Label Content="Data Binding" HorizontalAlignment="Center" FontSize="24" VerticalAlignment="Bottom"/>
+		</StackPanel>
+		<StackPanel Grid.Column="1" Grid.Row="0">
+			<TextBlock Name="aryTxt" />
+			<Button Content="Click" Click="Button_Click_1" />
+			<Label Content="Loop through Array" HorizontalAlignment="Center" FontSize="24" VerticalAlignment="Bottom"/>
+		</StackPanel>
+		<StackPanel Grid.Column="2" Grid.Row="0">
+			<TextBlock Name="stringTxt" />
+			<TextBox Name="addTxt" Text="Type Here"/>
+			<Button Content="Click" Click="Button_Click" />
+			<Label Content="String Builder" HorizontalAlignment="Center" FontSize="24" VerticalAlignment="Bottom"/>
+		</StackPanel>
 
-    </Grid>
+		<StackPanel Grid.Column="0" Grid.Row="1">
+			<TextBox Name="strTxt" />
+			<TextBox Name="dbl" Text="Double:"/>
+			<TextBlock Name="dblTxt"/>
+			<Button Content="Click" />
+			<Label Content="Convert to Double" HorizontalAlignment="Center" FontSize="24" VerticalAlignment="Bottom"/>
+		</StackPanel>
+
+	</Grid>
 </Window>

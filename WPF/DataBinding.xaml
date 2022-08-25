@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="DataBinding" Height="500" Width="400">
     <StackPanel Margin="10">
-		<TextBlock x:Name="txtValue" />
+		<TextBox x:Name="txtValue" />
 		<WrapPanel>
 			<TextBlock Text="Value" FontWeight="Bold" />
 			<TextBlock Text="{Binding Path=Text, ElementName=txtValue}" />
