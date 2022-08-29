@@ -4,67 +4,24 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Final"
-		xmlns:r="clr-namespace:Final.Resources"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-		<Grid.ColumnDefinitions>
-			<ColumnDefinition></ColumnDefinition>
-			<ColumnDefinition></ColumnDefinition>
-			<ColumnDefinition></ColumnDefinition>
-		</Grid.ColumnDefinitions>
-		<Grid.RowDefinitions>
-			<RowDefinition></RowDefinition>
-			<RowDefinition></RowDefinition>
-			<RowDefinition></RowDefinition>
-		</Grid.RowDefinitions>
-		<StackPanel Grid.Column="0" Grid.Row="0">
-			<Label Content="{Binding Path=Text, ElementName=updateTxt}" />
-			<TextBox x:Name="updateTxt" Text="Type Here"/>
-			<Label Content="Data Binding" HorizontalAlignment="Center" FontSize="24" VerticalAlignment="Bottom"/>
-		</StackPanel>
-		<StackPanel Grid.Column="1" Grid.Row="0">
-			<TextBlock Name="aryTxt" />
-			<Button Content="Click" Click="Button_Click_1" />
-			<Label Content="Loop through Array" HorizontalAlignment="Center" FontSize="24" VerticalAlignment="Bottom"/>
-		</StackPanel>
-		<StackPanel Grid.Column="2" Grid.Row="0">
-			<TextBlock Name="stringTxt" />
-			<TextBox Name="addTxt" Text="Type Here"/>
-			<Button Content="Click" Click="Button_Click" />
-			<Label Content="String Builder" HorizontalAlignment="Center" FontSize="24" VerticalAlignment="Bottom"/>
-		</StackPanel>
+	<StackPanel>
+		<Label Content="Rock, Paper, Scissors" HorizontalAlignment="Center" DockPanel.Dock="Top" FontSize="25"/>
+		<WrapPanel>
+			<StackPanel HorizontalAlignment="Center" Margin="10">
+				<Label Content="Pick Rock, Paper, or Scissors" Width="160" Margin="10"/>
+				<TextBox Name="userPick"  Width="160" Margin="10"/>
+				<Button Name="btnUser" Content="Choose" Width="60" Margin="10" Click="btnUser_Click"/>
+			</StackPanel>
 
-		<StackPanel Grid.Column="0" Grid.Row="1">
-			<TextBox Name="strTxt" />
-			<TextBlock Name="dbl" Text="Double:"/>
-			<TextBlock Name="dblTxt"/>
-			<Button Content="Click" Click="Button_Click_2" />
-			<Label Content="Convert to Double" HorizontalAlignment="Center" FontSize="24" VerticalAlignment="Bottom"/>
-		</StackPanel>
-
-		<!--<StackPanel Grid.Row="1" Grid.Column="1">
-			<r:textbox.xaml />
-		</StackPanel> -->
-
-		<StackPanel Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Height="144" Margin="266,0,0,0" VerticalAlignment="Bottom">
-			<Button Content="Button" VerticalAlignment="Bottom" Click="Button_Click_3"/>
-			<Label Content="Inheritance" HorizontalAlignment="Center" FontSize="24" VerticalAlignment="Bottom"/>
-		</StackPanel>
-
-		<StackPanel Grid.Row="2" Grid.Column="0">
-			<Label Name="updatelbl" Content="Update Sql" />
-			<WrapPanel>
-				<Label Content="Name To Change: " />
-				<TextBox Name="sqlName" />
-			</WrapPanel>
-			<WrapPanel>
-				<Label Content="New Name: " />
-				<TextBox Name="sqlUpdate" />
-			</WrapPanel>
-
-			<Button Content="Button" VerticalAlignment="Bottom" Click="Button_Click_4" />
-		</StackPanel>
-
-	</Grid>
+			<StackPanel HorizontalAlignment="Center" Margin="10">
+				<Label Content="User:" />
+				<TextBlock Name="userInput" Width="160" Text="{Binding Path=Text, ElementName=userPick}"/>
+				<Label Content="Computer:" />
+				<TextBlock Name="compInput" Width="160" />
+			</StackPanel>
+		</WrapPanel>
+		<Label Name="winner" FontSize="25" />
+	</StackPanel>
 </Window>

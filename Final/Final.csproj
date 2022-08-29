@@ -11,17 +11,4 @@
     <ProjectReference Include="..\DNDGeneratior\DNDGeneratior.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Compile Update="Resources\textBox.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Page Update="Resources\textBox.xaml">
-      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
-      <SubType>Designer</SubType>
-    </Page>
-  </ItemGroup>
-
 </Project>
