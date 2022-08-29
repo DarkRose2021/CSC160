@@ -2,23 +2,23 @@
 {
 	public partial class MainPage : ContentPage
 	{
-		int count = 0;
-
 		public MainPage()
 		{
 			InitializeComponent();
 		}
 
-		private void OnCounterClicked(object sender, EventArgs e)
+		async void CounterBtn_Clicked(object sender, EventArgs e)
 		{
-			count++;
-
-			if (count == 1)
-				CounterBtn.Text = $"Clicked {count} time";
+			string result = await DisplayPromptAsync("Question 2", "What's 5 + 5?", maxLength: 2);
+			if (result == "10")
+			{
+				await DisplayAlert("Correct?", "Correct!", "Close");
+			}
 			else
-				CounterBtn.Text = $"Clicked {count} times";
-
-			SemanticScreenReader.Announce(CounterBtn.Text);
+			{
+				await DisplayAlert("Correct?", "Incorrect!", "Close");
+			}
 		}
 	}
+
 }

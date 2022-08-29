@@ -30,7 +30,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Login", "Login\Login.csproj
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Final", "Final\Final.csproj", "{958A9075-DB30-443A-A2DD-DD6E11B9CFA0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MauiTest", "MauiTest\MauiTest.csproj", "{7855F152-5645-4B78-B2A4-1618A67A84F8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MauiTest", "MauiTest\MauiTest.csproj", "{7855F152-5645-4B78-B2A4-1618A67A84F8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{85115238-BD12-4557-B0DB-49CD4ADBC8E3}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

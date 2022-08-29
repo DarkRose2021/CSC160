@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Final"
+		xmlns:r="clr-namespace:Final.Resources"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
@@ -36,10 +37,33 @@
 
 		<StackPanel Grid.Column="0" Grid.Row="1">
 			<TextBox Name="strTxt" />
-			<TextBox Name="dbl" Text="Double:"/>
+			<TextBlock Name="dbl" Text="Double:"/>
 			<TextBlock Name="dblTxt"/>
-			<Button Content="Click" />
+			<Button Content="Click" Click="Button_Click_2" />
 			<Label Content="Convert to Double" HorizontalAlignment="Center" FontSize="24" VerticalAlignment="Bottom"/>
+		</StackPanel>
+
+		<!--<StackPanel Grid.Row="1" Grid.Column="1">
+			<r:textbox.xaml />
+		</StackPanel> -->
+
+		<StackPanel Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Height="144" Margin="266,0,0,0" VerticalAlignment="Bottom">
+			<Button Content="Button" VerticalAlignment="Bottom" Click="Button_Click_3"/>
+			<Label Content="Inheritance" HorizontalAlignment="Center" FontSize="24" VerticalAlignment="Bottom"/>
+		</StackPanel>
+
+		<StackPanel Grid.Row="2" Grid.Column="0">
+			<Label Name="updatelbl" Content="Update Sql" />
+			<WrapPanel>
+				<Label Content="Name To Change: " />
+				<TextBox Name="sqlName" />
+			</WrapPanel>
+			<WrapPanel>
+				<Label Content="New Name: " />
+				<TextBox Name="sqlUpdate" />
+			</WrapPanel>
+
+			<Button Content="Button" VerticalAlignment="Bottom" Click="Button_Click_4" />
 		</StackPanel>
 
 	</Grid>
