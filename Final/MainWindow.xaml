@@ -5,23 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Final"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="500" Width="800">
 	<StackPanel>
 		<Label Content="Rock, Paper, Scissors" HorizontalAlignment="Center" DockPanel.Dock="Top" FontSize="25"/>
-		<WrapPanel>
-			<StackPanel HorizontalAlignment="Center" Margin="10">
-				<Label Content="Pick Rock, Paper, or Scissors" Width="160" Margin="10"/>
-				<TextBox Name="userPick"  Width="160" Margin="10"/>
-				<Button Name="btnUser" Content="Choose" Width="60" Margin="10" Click="btnUser_Click"/>
-			</StackPanel>
-
-			<StackPanel HorizontalAlignment="Center" Margin="10">
-				<Label Content="User:" />
-				<TextBlock Name="userInput" Width="160" Text="{Binding Path=Text, ElementName=userPick}"/>
-				<Label Content="Computer:" />
-				<TextBlock Name="compInput" Width="160" />
-			</StackPanel>
+		<WrapPanel HorizontalAlignment="Center">
+			<Button Name="rock" Margin="10" Click="rock_Click">
+				<Image  Height="148" Width="152" Source="/Resources/rock.jpg" />
+			</Button>
+			<Button Name="paper" Margin="10" Click="paper_Click">
+				<Image Height="148" Width="152" Source="/Resources/paper.png" />
+			</Button>
+			<Button Name="scissors" Margin="10" Click="scissors_Click">
+				<Image Height="148" Width="152" Source="/Resources/scissors.png" />
+			</Button>
 		</WrapPanel>
-		<Label Name="winner" FontSize="25" />
+		<WrapPanel HorizontalAlignment="Center">
+			<Label Content="Computer Chose:" FontSize="20"/>
+			<Image Height="148" Width="152" Name="compImg" Margin="10"/>
+		</WrapPanel>
+		<Label Name="winner" FontSize="25" HorizontalAlignment="Center"/>
 	</StackPanel>
 </Window>

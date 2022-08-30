@@ -8,7 +8,19 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\paper.png" />
+    <None Remove="Resources\rock.jpg" />
+    <None Remove="Resources\scissors.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\DNDGeneratior\DNDGeneratior.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\paper.png" />
+    <Resource Include="Resources\rock.jpg" />
+    <Resource Include="Resources\scissors.png" />
   </ItemGroup>
 
 </Project>

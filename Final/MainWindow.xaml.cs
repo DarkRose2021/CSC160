@@ -10,21 +10,47 @@ namespace Final
 	{
 		private Random random = new Random();
 		string[] aryChoices = new string[] { "Rock", "Paper", "Scissors" };
+		int userChoiceInt;
 		public MainWindow()
 		{
 			InitializeComponent();
 		}
 
-		private void btnUser_Click(object sender, RoutedEventArgs e)
+		private void game()
 		{
 			string compChoice = aryChoices[random.Next(aryChoices.Length)];
-			compInput.Text = compChoice;
+			string userChoice = "";
 
-			if ((userPick.ToString() == "Rock" && compChoice == "Scissors") || (userPick.ToString() == "Paper" && compChoice == "Rock") || (userPick.ToString() == "Scissors" && compChoice == "Paper"))
+			switch (userChoiceInt)
+			{
+				case 1:
+					userChoice = "Rock";
+					break;
+				case 2:
+					userChoice = "Paper";
+					break;
+				case 3:
+					userChoice = "Scissors";
+					break;
+			}
+
+			switch (compChoice)
+			{
+				case "Rock":
+
+					//compImg.Source = "/Resources/rock.jpg";
+					break;
+				case "Paper":
+					break;
+				case "Scissors":
+					break;
+			}
+
+			if ((userChoice == "Rock" && compChoice == "Scissors") || (userChoice == "Paper" && compChoice == "Rock") || (userChoice == "Scissors" && compChoice == "Paper"))
 			{
 				winner.Content = "User Wins!";
 			}
-			else if ((compChoice == "Rock" && userPick.ToString() == "Scissors") || (compChoice == "Paper" && userPick.ToString() == "Rock") || (compChoice == "Scissors" && userPick.ToString() == "Paper"))
+			else if ((compChoice == "Rock" && userChoice == "Scissors") || (compChoice == "Paper" && userChoice == "Rock") || (compChoice == "Scissors" && userChoice == "Paper"))
 			{
 				winner.Content = "Computer Wins!";
 			}
@@ -32,6 +58,24 @@ namespace Final
 			{
 				winner.Content = "Tie Game!";
 			}
+		}
+
+		private void rock_Click(object sender, RoutedEventArgs e)
+		{
+			userChoiceInt = 1;
+			game();
+		}
+
+		private void paper_Click(object sender, RoutedEventArgs e)
+		{
+			userChoiceInt = 2;
+			game();
+		}
+
+		private void scissors_Click(object sender, RoutedEventArgs e)
+		{
+			userChoiceInt = 3;
+			game();
 		}
 	}
 }
