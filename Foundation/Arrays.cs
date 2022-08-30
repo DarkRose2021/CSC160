@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Foundation
+﻿namespace Foundation
 {
-    internal class Arrays
+    public class Arrays
     {
         public static void DoIt()
         {
@@ -17,11 +11,11 @@ namespace Foundation
             //int arys default to 0 otherwise it defaults to null
 
             int[] ary2 = { 1, 4, 7, 11 };
-            int[] ary3 = new int[] {1,3,7,11};
+            int[] ary3 = new int[] { 1, 3, 7, 11 };
 
 
             //test 
-            for(int i = 0; i < ary1.Length; i++)
+            for (int i = 0; i < ary1.Length; i++)
             {
                 Console.WriteLine("{0} ", ary1[i]);
             }
@@ -37,13 +31,13 @@ namespace Foundation
             Console.WriteLine();
 
             //arrays that allow different types
-            object[] aryMultiStuff = new object[] {10, "bob", 10.4f};
+            object[] aryMultiStuff = new object[] { 10, "bob", 10.4f };
 
             string[,] aryMultiDim = new string[2, 2] { { "A", "B" }, { "C", "D" } };
 
-            for(int row = 0; row < aryMultiDim.GetLength(0); row++)
+            for (int row = 0; row < aryMultiDim.GetLength(0); row++)
             {
-                for(int col = 0; col < aryMultiDim.GetLength(1); col++)
+                for (int col = 0; col < aryMultiDim.GetLength(1); col++)
                 {
                     Console.Write("{0} ", aryMultiDim[row, col]);
                 }
@@ -65,7 +59,7 @@ namespace Foundation
             Array.Sort(aryNums);
             WriteArray(aryNums);
 
-            Console.WriteLine("Find Index {0}", Array.IndexOf(aryNums,2));
+            Console.WriteLine("Find Index {0}", Array.IndexOf(aryNums, 2));
             Console.WriteLine("All Nums <4");
             WriteArray(Array.FindAll(aryNums, LessThanFour));
 
@@ -80,14 +74,14 @@ namespace Foundation
 
         }
 
-        static bool LessThanFour(int value)
+        public static bool LessThanFour(int value)
         {
             return value < 4;
         }
 
         static void WriteArray(int[] values)
         {
-            for(int i = 0; i < values.Length; i++)
+            for (int i = 0; i < values.Length; i++)
             {
                 Console.Write("{0} ", values[i]);
             }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows;
+using System.Windows.Media.Imaging;
 
 namespace Final
 {
@@ -37,8 +38,8 @@ namespace Final
 			switch (compChoice)
 			{
 				case "Rock":
-
-					//compImg.Source = "/Resources/rock.jpg";
+					Uri uri = new Uri("C:\\aNeumont\\Year 1\\Q4\\App Dev\\CSC160\\Final\\Resources");
+					compImg.Source = new BitmapImage(uri);
 					break;
 				case "Paper":
 					break;
