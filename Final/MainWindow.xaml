@@ -20,8 +20,8 @@
 			</Button>
 		</WrapPanel>
 		<WrapPanel HorizontalAlignment="Center">
-			<Label Content="Computer Chose:" FontSize="20"/>
-			<Image Height="148" Width="152" Name="compImg" Margin="10"/>
+			<Label Name="temp" Content="Computer Chose:" FontSize="20"/>
+			<Image Height="148" Width="152" Name="compImg" Margin="10" />
 		</WrapPanel>
 		<Label Name="winner" FontSize="25" HorizontalAlignment="Center"/>
 	</StackPanel>

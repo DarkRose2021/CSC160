@@ -38,12 +38,22 @@ namespace Final
 			switch (compChoice)
 			{
 				case "Rock":
-					Uri uri = new Uri("C:\\aNeumont\\Year 1\\Q4\\App Dev\\CSC160\\Final\\Resources");
-					compImg.Source = new BitmapImage(uri);
+					temp.Content = "Computer Chose: Rock";
+					//compImg.Source = new BitmapImage(new Uri(@"/Resources/rock.jpg", UriKind.Relative));
+					Uri urir = new Uri("C:\\aNeumont\\Year 1\\Q4\\App Dev\\CSC160\\Final\\Resources\\rock.jpg");
+					compImg.Source = new BitmapImage(urir);
 					break;
 				case "Paper":
+					temp.Content = "Computer Chose: Paper";
+					compImg.Source = new BitmapImage(new Uri(@"/Resources/paper.png", UriKind.Relative));
+					//Uri urip = new Uri("C:\\aNeumont\\Year 1\\Q4\\App Dev\\CSC160\\Final\\Resources\\paper.png");
+					//compImg.Source = new BitmapImage(urip);
 					break;
 				case "Scissors":
+					temp.Content = "Computer Chose: Scissors";
+					compImg.Source = new BitmapImage(new Uri(@"/Resources/scissors.png", UriKind.Relative));
+					//Uri uris = new Uri("C:\\aNeumont\\Year 1\\Q4\\App Dev\\CSC160\\Final\\Resources\\scissors.png");
+					//compImg.Source = new BitmapImage(uris);
 					break;
 			}
 
